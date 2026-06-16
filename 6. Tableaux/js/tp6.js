@@ -1,14 +1,18 @@
 const { useState } = React;
 
 const App = () => {
-    const [liste, setListe] = useState([
-        { id: 1, nom: "Alice" },
-        { id: 2, nom: "Bob" },
-        { id: 3, nom: "Charlie" }
+    const [list, setList] = useState([
+        { id: 1, name: "Alice" },
+        { id: 2, name: "Bob" },
+        { id: 3, name: "Charlie" }
     ]);
+    const listItems = list.map((item, i) => <li key={i}>{item.name}</li>)
 
     return (
         <>
+            <ul>
+                {listItems}
+            </ul>
         </>
     );
 }

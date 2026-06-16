@@ -8,6 +8,7 @@ const App = () => {
   // --- Affichage Composant ---
   return (
     <>
+      <h1>Hello World</h1>
     </>
   )
 }
