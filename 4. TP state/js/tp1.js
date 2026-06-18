@@ -1,7 +1,14 @@
-const { useState } = React;
+const { useState, useEffect } = React;
 
 function App() {
     const [count, setCount] = useState(0);
+    const [count2, setCount2] = useState(0);
+
+    useEffect(() => {
+        console.log("quand count change");
+    }, [count2]);
+
+
 
     return (
         <>

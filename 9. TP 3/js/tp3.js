@@ -41,8 +41,8 @@ const App = () => {
             user: selectedUser,
             text: taskText
         };
-        setTasks((previousTasks) => [
-            ...previousTasks,
+        setTasks(() => [
+            ...tasks,
             newTask
         ]);
     };
@@ -53,7 +53,7 @@ const App = () => {
             <h2>Choisir un membre :</h2>
             <ul>
                 {users.map((user) => (
-                    <li
+                    <li className=""
                         key={user}
                         onClick={() => handleUserSelection(user)}
                         style={{
@@ -72,7 +72,7 @@ const App = () => {
             <ul>
                 {tasks.map((task) => (
                     <li key={task.id}>
-                        <strong>{task.user}</strong> : {task.text}
+                        <strong>{task.user}</strong> : {task.text} : {task.id}
                     </li>
                 ))}
             </ul>
